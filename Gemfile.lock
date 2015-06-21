@@ -141,3 +141,6 @@ DEPENDENCIES
   middleman-deploy
   middleman-livereload
   neat
+
+BUNDLED WITH
+   1.10.4
