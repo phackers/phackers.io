@@ -9,12 +9,12 @@ inviteButton.on('click', function() {
   $.ajax({
     type: "POST",
     url: url,
-    success: function(data, text) {
-      inviteButton.text("Check your email");
-    },
-    error: function(request, status, error) {
-      if (error === "already_invited") {
-        inviteButton.text("Already invited");
+    success: function(response) {
+      if (response.ok === false) {
+        var error_msg = response.error.split("_").join(" ");
+        inviteButton.text(error_msg);
+      } else if (response.ok === true) {
+        inviteButton.text("Checked your email");
       }
     }
   });
