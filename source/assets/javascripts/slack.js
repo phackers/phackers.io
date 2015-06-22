@@ -19,3 +19,17 @@ inviteButton.on('click', function() {
     }
   });
 });
+
+function getTotalUsers() {
+  var url = "https://phackers.slack.com/api/users.list?token=xoxp-3359469240-3368537646-3525848797-5d232a";
+  $.ajax({
+    type: "GET",
+    url: url,
+    success: function(response) {
+      var totalUsers = response.members.length;
+      var currentUsersTotal = $('.total-users').text(totalUsers);
+    }
+  })
+}
+
+getTotalUsers();
