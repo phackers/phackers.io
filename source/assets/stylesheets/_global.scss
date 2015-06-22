@@ -11,7 +11,7 @@
 }
 .introduction-headline {
   font-size: 64px;
-  color: $white;
+  color: $pink;
   text-align: center;
   margin: 0;
 }
@@ -20,6 +20,11 @@
   text-align: center;
   color: $white;
 }
+
+.section-features {
+  @include outer-container;
+}
+
 
 
 
