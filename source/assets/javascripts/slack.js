@@ -9,6 +9,13 @@ inviteButton.on('click', function() {
   $.ajax({
     type: "POST",
     url: url,
-    success: function() { alert("check your email!"); }
+    success: function(data, text) {
+      inviteButton.text("Check your email");
+    },
+    error: function(request, status, error) {
+      if (error === "already_invited") {
+        inviteButton.text("Already invited");
+      }
+    }
   });
 });
