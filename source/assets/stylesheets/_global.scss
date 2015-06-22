@@ -4,6 +4,7 @@
     url(../images/header_bg.jpg) center top / cover no-repeat;
   height: 100vh;
 }
+
 .section-introduction-wrapper {
   position: relative;
   top: 50%;
@@ -15,6 +16,7 @@
     padding: 0 30px;
   }
 }
+
 .introduction-headline {
   font-size: 64px;
   color: $pink;
@@ -25,6 +27,7 @@
     font-size: 48px;
   }
 }
+
 .introduction-catchphrase {
   font-size: 24px;
   text-align: center;
@@ -56,4 +59,8 @@
       display: block;
     }
   }
+}
+
+.total-users {
+  color: $pink;
 }
