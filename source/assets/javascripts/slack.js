@@ -20,7 +20,7 @@
           var error_msg = response.error.split("_").join(" ");
           inviteButton.text(error_msg);
         } else if (response.ok === true) {
-          inviteButton.text("Checked your email");
+          inviteButton.text("Check your email");
         }
       }
     });
