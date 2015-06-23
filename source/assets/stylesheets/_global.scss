@@ -32,6 +32,7 @@
   font-size: 24px;
   text-align: center;
   color: $white;
+  margin-bottom: 10px;
 
   @media screen and (max-width: 414px) {
     font-size: 20px;
@@ -46,8 +47,9 @@
 .join-us-container {
   text-align: center;
   > input {
-    width: 450px;
-    display: inline-block;
+    width: 50%;
+    margin: 0 auto 10px auto;
+    // display: inline-block;
   }
   > button {
     text-transform: uppercase;
