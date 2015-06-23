@@ -8,10 +8,12 @@
   inviteButton.on("click", function() {
     var email = encodeURIComponent($(".invite-email").val());
     var time = new Date().getTime();
-    var url = "https://" + subdomain + ".slack.com/api/users.admin.invite?t=" + time + "&email=" + email + "&token=" + token + "&set_active=true";
+    var url = "https://evening-temple-9783.herokuapp.com/api/v1/invite/";
+    // var url = "http://localhost:8888/api/v1/invite/";
 
     $.ajax({
       type: "POST",
+      data:{email: email, time: time},
       url: url,
       success: function(response) {
         if (response.ok === false) {
