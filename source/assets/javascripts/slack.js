@@ -1,8 +1,6 @@
 (function() {
 
   var inviteButton = $('.invite-button');
-  var token = "xoxp-3359469240-3368537646-3525848797-5d232a";
-  var subdomain = "phackers";
   var currentUsersTotal = $('.total-users');
 
   getTotalUsers();
@@ -32,8 +30,9 @@
     $.ajax({
       type: "GET",
       url: url,
+      dataType: 'json',
       success: function(response) {
-        currentUsersTotal.text(totalUsers);
+        currentUsersTotal.text(response);
       }
     });
   }
