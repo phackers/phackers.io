@@ -28,12 +28,11 @@
   });
 
   function getTotalUsers() {
-    var url = "https://" + subdomain + ".slack.com/api/users.list?token=" + token;
+    var url = "https://evening-temple-9783.herokuapp.com/api/v1/users/";
     $.ajax({
       type: "GET",
       url: url,
       success: function(response) {
-        var totalUsers = response.members.length;
         currentUsersTotal.text(totalUsers);
       }
     });
