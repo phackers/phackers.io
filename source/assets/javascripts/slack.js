@@ -8,11 +8,11 @@
   inviteButton.on("click", function() {
     var email = $(".invite-email").val();
     var time = new Date().getTime();
-    var url = "https://evening-temple-9783.herokuapp.com/api/v1/invite/";
+    var url = "https://phackers-proxy.herokuapp.com/api/v1/invite/";
 
     $.ajax({
       type: "POST",
-      data:{email: email, time: time},
+      data:{email: email},
       url: url,
       dataType: 'json',
       success: function(response) {
@@ -28,7 +28,7 @@
   });
 
   function getTotalUsers() {
-    var url = "https://evening-temple-9783.herokuapp.com/api/v1/users/";
+    var url = "https://phackers-proxy.herokuapp.com/api/v1/users/";
     $.ajax({
       type: "GET",
       url: url,
