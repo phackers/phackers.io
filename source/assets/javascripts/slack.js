@@ -6,15 +6,15 @@
   getTotalUsers();
 
   inviteButton.on("click", function() {
-    var email = encodeURIComponent($(".invite-email").val());
+    var email = $(".invite-email").val();
     var time = new Date().getTime();
     var url = "https://evening-temple-9783.herokuapp.com/api/v1/invite/";
-    // var url = "http://localhost:8888/api/v1/invite/";
 
     $.ajax({
       type: "POST",
       data:{email: email, time: time},
       url: url,
+      dataType: 'json',
       success: function(response) {
         if (response.ok === false) {
           var error_msg = response.error.split("_").join(" ");
